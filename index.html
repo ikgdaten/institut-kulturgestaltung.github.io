@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Institut für Kulturgestaltung e.V. — Wir erschaffen Forschungsräume</title>
+<meta name="description" content="Gemeinnütziger Verein für neue Bildung und Kultur. Wir entwickeln und erproben selbstbestimmte Bildungsformen an echten Orten. Zentrales Projekt: Uniartcity.">
+<link rel="canonical" href="https://institut-kulturgestaltung.de/">
+<meta property="og:title" content="Institut für Kulturgestaltung e.V.">
+<meta property="og:description" content="Wir erschaffen Forschungsräume. Selbstbestimmte Bildung an echten Orten.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://institut-kulturgestaltung.de/">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1B3A5C"/><g fill="none" stroke="#F3F2EE" stroke-width="6" stroke-linejoin="round"><path d="M 50 30 A 20 20 0 1 0 70 50 L 50 50"/><path d="M 50 50 L 64 36"/></g><path d="M 50 34 C 50.6 39, 51.4 45, 51.7 50 C 51.4 56, 50.6 61, 50 66 C 49.4 61, 48.6 56, 48.3 50 C 48.6 45, 49.4 39, 50 34 Z" fill="#E8B23A"/></svg></template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./i18n-en.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { margin: 0; background: #F3F2EE; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #1B3A5C; }
+  /* Tablet */
+  @media (max-width: 1080px) {
+    [data-r="angebot"] { grid-template-columns: minmax(0,140px) minmax(0,1fr) !important; row-gap: 12px !important; }
+    [data-r="angebot"] > div:nth-of-type(3), [data-r="angebot"] > div:nth-of-type(4) { grid-column: 2 !important; justify-self: start !important; }
+    [data-r="hero"] { grid-template-columns: minmax(0,1fr) !important; align-items: start !important; gap: 28px !important; }
+    [data-r="footer"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+    [data-r="orte"] { grid-template-columns: minmax(0,1fr) !important; }
+    [data-r="vorstand"] { grid-template-columns: repeat(3, minmax(0,1fr)) !important; gap: 18px !important; }
+    [data-r="vision3"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+    [data-r="feld"] { grid-template-columns: 30px minmax(0,1fr) !important; row-gap: 6px !important; }
+    [data-r="feld"] > p { grid-column: 2 !important; }
+    [data-r="vision3"] > p { transform: none !important; }
+    [data-r="praxis"] > div { transform: none !important; }
+    nav { font-size: 11px !important; gap: 6px 14px !important; }
+    [data-band] { min-height: 200px !important; }
+  }
+  /* Handy */
+  @media (max-width: 760px) {
+    [data-threadwrap] { width: 38px !important; }
+    [data-pad] { padding-left: 54px !important; padding-right: 24px !important; }
+    header [data-pad] { padding-top: 11px !important; padding-bottom: 11px !important; gap: 10px !important; }
+    header nav { display: none !important; }
+    [data-lang-toggle] { padding: 11px 10px !important; }
+    header a[href*="tally"] { padding: 12px 13px !important; }
+
+    [data-r="hero"], [data-r="vision"], [data-r="vision3"], [data-r="half"],
+    [data-r="footer"], [data-r="angebot"], [data-r="stats"] { grid-template-columns: minmax(0,1fr) !important; }
+    [data-r="angebot"] > div { grid-column: 1 !important; justify-self: start !important; }
+    [data-r="stats"] > div { grid-column: auto !important; }
+    [data-r="step"] { grid-template-columns: 40px minmax(0,1fr) !important; gap: 14px !important; }
+    [data-r="orterow"] { grid-template-columns: minmax(0,1fr) !important; row-gap: 3px !important; }
+    [data-r="orterow"] > span:last-child { text-align: left !important; }
+    [data-r="vision3"] { gap: 20px !important; }
+    [data-r="half"] { gap: 30px !important; }
+
+    h1 { font-size: clamp(36px, 11.5vw, 58px) !important; margin-top: 30px !important; }
+    [data-r="hero"] { margin: 26px 0 40px 0 !important; gap: 26px !important; }
+    [data-r="hero"] > p { font-size: 20px !important; }
+    #top { padding-top: 0 !important; padding-bottom: 0 !important; }
+    #top [data-pad] > div:first-child { padding: 10px 0 !important; row-gap: 2px !important; }
+    #top [data-pad] > div:first-child > span:last-child { display: none !important; }
+
+    section[id] { padding-top: 56px !important; }
+    #vision { padding-top: 0 !important; }
+    #vision > div, #mitglied > div { padding-top: 52px !important; padding-bottom: 52px !important; }
+    #vision > div > p { font-size: 26px !important; }
+    #mitglied { margin-top: 56px !important; }
+    #mitglied h2 { font-size: 30px !important; }
+    #kreislauf [data-r="half"] { gap: 30px !important; }
+    footer { margin-top: 64px !important; }
+    footer [data-pad] { padding-top: 48px !important; }
+
+    [data-bandsec] { margin-top: 48px !important; }
+    [data-band] { min-height: 0 !important; }
+    [data-bandtext] { padding: 0 24px 22px 54px !important; }
+    [data-bandtext] > p { font-size: 21px !important; max-width: none !important; }
+
+    [data-rail] { padding: 26px 24px 8px 54px !important; scroll-padding-left: 54px !important; }
+    #uniartcity [data-r="half"] > div > div:last-child { margin-bottom: 8px !important; }
+    #mitglied [data-r="half"] > div:first-child > div:last-child { gap: 12px !important; margin-bottom: 8px !important; }
+    [data-rail] article { flex-basis: 76vw !important; }
+    [data-r="orte"], [data-r="ausbau"] { grid-template-columns: minmax(0,1fr) !important; }
+    [data-r="feld"] { grid-template-columns: 30px minmax(0,1fr) !important; row-gap: 6px !important; }
+    [data-r="feld"] > p { grid-column: 2 !important; }
+    [data-r="vorstand"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; gap: 18px !important; }
+    [data-r="ausbau"] > span { justify-self: start !important; }
+  }
+
+
+  [data-rail]::-webkit-scrollbar { display: none; }
+  @keyframes sSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @keyframes sSpinBack { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+</style>
+</helmet>
+
+<div style="position:relative;background:#F3F2EE;color:#101418;font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;hyphens:auto;-webkit-hyphens:auto;overflow-x:hidden">
+
+  <div data-threadwrap="1" style="position:absolute;left:0;top:0;width:clamp(66px,6vw,132px);height:100%;pointer-events:none;z-index:0">
+    <svg viewBox="0 0 60 1000" preserveAspectRatio="none" style="width:100%;height:100%">
+      <path d="M 32 0 C 8 160, 52 320, 26 480 C 4 640, 54 800, 32 1000" fill="none" stroke="#DCE0E2" stroke-width="1.6"></path>
+      <path data-thread="1" d="M 32 0 C 8 160, 52 320, 26 480 C 4 640, 54 800, 32 1000" fill="none" stroke="#1B3A5C" stroke-width="2.6" stroke-linecap="round"></path>
+    </svg>
+  </div>
+
+  <header style="position:sticky;top:0;z-index:6;background:rgba(243,242,238,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:2px solid #101418">
+    <div data-pad="1" style="max-width:1560px;margin:0 auto;padding:14px clamp(56px,5.6vw,120px) 14px clamp(66px,6vw,132px);box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,1.6vw,26px)">
+      <a href="#top" style="display:flex;align-items:center;gap:15px"><svg width="40" height="40" viewBox="0 0 130 130" aria-label="IKG"><path d="M 68.37 16.86 L 66.69 16.73 L 65.00 16.66 L 63.31 16.64 L 61.62 16.69 L 59.93 16.80 L 58.25 16.97 L 56.58 17.20 L 54.90 17.48 L 53.24 17.84 L 51.59 18.25 L 49.96 18.72 L 48.34 19.24 L 46.74 19.82 L 45.17 20.47 L 43.62 21.17 L 42.09 21.92 L 40.59 22.72 L 39.12 23.58 L 37.67 24.49 L 36.26 25.45 L 34.89 26.46 L 33.55 27.52 L 32.25 28.63 L 30.99 29.78 L 29.76 30.97 L 28.58 32.21 L 27.45 33.49 L 26.36 34.81 L 25.31 36.17 L 24.33 37.56 L 23.38 39.00 L 22.48 40.46 L 21.65 41.95 L 20.86 43.47 L 20.13 45.03 L 19.46 46.60 L 18.85 48.20 L 18.29 49.82 L 17.79 51.46 L 17.36 53.12 L 16.98 54.80 L 16.68 56.48 L 16.43 58.18 L 16.25 59.88 L 16.13 61.58 L 16.08 63.29 L 16.08 65.00 L 16.16 66.71 L 16.30 68.41 L 16.49 70.10 L 16.76 71.78 L 17.09 73.45 L 17.48 75.10 L 17.93 76.74 L 18.44 78.35 L 19.00 79.94 L 19.64 81.51 L 20.32 83.06 L 21.05 84.57 L 21.84 86.06 L 22.67 87.50 L 23.56 88.93 L 24.49 90.32 L 25.47 91.66 L 26.49 92.98 L 27.55 94.25 L 28.66 95.49 L 29.80 96.69 L 30.97 97.86 L 32.19 98.98 L 33.43 100.07 L 34.70 101.11 L 36.01 102.11 L 37.33 103.08 L 38.69 104.00 L 40.08 104.88 L 41.49 105.72 L 42.92 106.52 L 44.38 107.28 L 45.85 108.00 L 47.36 108.67 L 48.87 109.30 L 50.42 109.89 L 51.97 110.43 L 53.55 110.92 L 55.15 111.36 L 56.75 111.77 L 58.38 112.12 L 60.02 112.42 L 61.66 112.66 L 63.33 112.86 L 65.00 113.01 L 66.68 113.10 L 68.37 113.12 L 70.06 113.10 L 71.75 113.01 L 73.44 112.87 L 75.13 112.67 L 76.82 112.40 L 78.49 112.06 L 80.16 111.67 L 81.83 111.21 L 83.46 110.70 L 85.09 110.11 L 86.68 109.46 L 88.26 108.75 L 89.82 107.97 L 91.33 107.14 L 92.81 106.24 L 94.26 105.28 L 95.68 104.27 L 97.04 103.19 L 98.37 102.06 L 99.65 100.87 L 100.87 99.64 L 102.05 98.36 L 103.18 97.03 L 104.24 95.66 L 105.25 94.25 L 106.21 92.80 L 107.09 91.30 L 107.93 89.78 L 108.70 88.24 L 109.41 86.66 L 110.06 85.06 L 110.65 83.44 L 111.17 81.80 L 111.63 80.15 L 112.03 78.49 L 112.37 76.81 L 112.65 75.13 L 112.87 73.44 L 113.03 71.75 L 113.13 70.06 L 113.18 68.37 L 113.17 66.68 L 113.10 65.00 L 112.97 63.33 L 112.80 61.66 L 112.72 61.10 L 105.94 61.66 L 105.99 62.14 L 106.12 63.56 L 106.19 65.00 L 106.20 66.44 L 106.16 67.88 L 106.07 69.32 L 105.92 70.75 L 105.71 72.17 L 105.44 73.60 L 105.13 75.01 L 104.76 76.40 L 104.33 77.78 L 103.86 79.14 L 103.33 80.49 L 102.76 81.82 L 102.14 83.11 L 101.47 84.39 L 100.75 85.64 L 100.00 86.87 L 99.19 88.06 L 98.34 89.23 L 97.46 90.36 L 96.53 91.47 L 95.58 92.53 L 94.58 93.56 L 93.55 94.57 L 92.48 95.52 L 91.39 96.45 L 90.26 97.33 L 89.11 98.18 L 87.92 98.98 L 86.71 99.74 L 85.47 100.47 L 84.22 101.14 L 82.94 101.77 L 81.64 102.36 L 80.31 102.91 L 78.98 103.41 L 77.63 103.87 L 76.26 104.27 L 74.88 104.62 L 73.48 104.92 L 72.09 105.18 L 70.68 105.39 L 69.26 105.55 L 67.84 105.66 L 66.42 105.70 L 65.00 105.71 L 63.58 105.66 L 62.17 105.57 L 60.75 105.41 L 59.34 105.21 L 57.96 104.95 L 56.57 104.65 L 55.21 104.29 L 53.85 103.89 L 52.51 103.43 L 51.19 102.93 L 49.89 102.39 L 48.62 101.79 L 47.37 101.15 L 46.15 100.47 L 44.94 99.75 L 43.77 98.98 L 42.63 98.17 L 41.51 97.33 L 40.42 96.45 L 39.38 95.54 L 38.36 94.59 L 37.37 93.61 L 36.42 92.60 L 35.50 91.56 L 34.62 90.49 L 33.77 89.40 L 32.96 88.28 L 32.18 87.14 L 31.44 85.97 L 30.73 84.79 L 30.06 83.58 L 29.42 82.35 L 28.82 81.11 L 28.25 79.84 L 27.72 78.57 L 27.24 77.27 L 26.79 75.95 L 26.37 74.63 L 26.00 73.29 L 25.67 71.94 L 25.37 70.57 L 25.13 69.19 L 24.91 67.80 L 24.75 66.41 L 24.63 65.00 L 24.56 63.59 L 24.53 62.17 L 24.56 60.75 L 24.62 59.32 L 24.75 57.90 L 24.92 56.48 L 25.14 55.06 L 25.42 53.65 L 25.74 52.25 L 26.12 50.85 L 26.55 49.47 L 27.05 48.10 L 27.59 46.75 L 28.18 45.42 L 28.83 44.12 L 29.53 42.83 L 30.28 41.59 L 31.09 40.36 L 31.94 39.17 L 32.84 38.01 L 33.79 36.90 L 34.79 35.82 L 35.82 34.79 L 36.90 33.79 L 38.02 32.85 L 39.18 31.95 L 40.37 31.10 L 41.59 30.29 L 42.84 29.54 L 44.12 28.84 L 45.43 28.19 L 46.76 27.60 L 48.11 27.06 L 49.48 26.57 L 50.86 26.13 L 52.25 25.75 L 53.66 25.42 L 55.07 25.15 L 56.48 24.92 L 57.90 24.75 L 59.33 24.63 L 60.75 24.55 L 62.17 24.53 L 63.59 24.56 L 65.00 24.62 L 66.40 24.74 L 67.80 24.91 A 4.03 4.03 0 0 0 68.37 16.86 Z" fill="#101418"></path><path d="M 64.00 61.55 L 66.50 61.46 L 69.00 61.31 L 71.50 61.12 L 74.00 60.93 L 76.50 60.76 L 79.00 60.66 L 81.50 60.62 L 84.00 60.65 L 86.50 60.72 L 89.00 60.81 L 91.50 60.90 L 94.00 60.94 L 96.50 60.95 L 99.00 60.93 L 101.50 60.90 L 104.00 60.89 L 106.50 60.92 L 109.00 61.01 L 111.50 61.15 L 111.50 69.21 L 109.00 69.18 L 106.50 69.09 L 104.00 68.95 L 101.50 68.76 L 99.00 68.59 L 96.50 68.43 L 94.00 68.35 L 91.50 68.33 L 89.00 68.39 L 86.50 68.50 L 84.00 68.63 L 81.50 68.75 L 79.00 68.83 L 76.50 68.88 L 74.00 68.88 L 71.50 68.87 L 69.00 68.86 L 66.50 68.88 L 64.00 68.95 Z" fill="#101418"></path><path d="M 62.57 62.57 L 63.18 61.97 L 63.78 61.37 L 64.38 60.77 L 64.98 60.17 L 65.59 59.57 L 66.19 58.97 L 66.80 58.37 L 67.40 57.77 L 68.00 57.17 L 68.61 56.58 L 69.22 55.98 L 69.82 55.38 L 70.43 54.79 L 71.04 54.19 L 71.65 53.60 L 72.25 53.00 L 72.86 52.41 L 73.47 51.81 L 74.08 51.22 L 74.70 50.63 L 75.31 50.04 L 75.92 49.45 L 76.53 48.85 L 77.14 48.26 L 77.76 47.68 L 78.37 47.09 L 78.99 46.50 L 79.60 45.91 L 80.22 45.32 L 80.84 44.74 L 81.45 44.15 L 82.07 43.57 L 82.69 42.98 L 83.31 42.40 L 83.93 41.81 L 84.55 41.23 L 85.17 40.65 L 85.79 40.07 L 86.42 39.49 L 87.04 38.91 L 87.66 38.33 L 88.29 37.75 L 88.91 37.17 L 89.54 36.59 L 90.17 36.02 L 90.79 35.44 L 91.42 34.87 L 92.05 34.29 A 2.59 2.59 0 0 1 95.71 37.95 L 95.13 38.58 L 94.56 39.21 L 93.98 39.83 L 93.41 40.46 L 92.83 41.09 L 92.25 41.71 L 91.67 42.34 L 91.09 42.96 L 90.51 43.58 L 89.93 44.21 L 89.35 44.83 L 88.77 45.45 L 88.19 46.07 L 87.60 46.69 L 87.02 47.31 L 86.43 47.93 L 85.85 48.55 L 85.26 49.16 L 84.68 49.78 L 84.09 50.40 L 83.50 51.01 L 82.91 51.63 L 82.32 52.24 L 81.74 52.86 L 81.15 53.47 L 80.55 54.08 L 79.96 54.69 L 79.37 55.30 L 78.78 55.92 L 78.19 56.53 L 77.59 57.14 L 77.00 57.75 L 76.40 58.35 L 75.81 58.96 L 75.21 59.57 L 74.62 60.18 L 74.02 60.78 L 73.42 61.39 L 72.83 62.00 L 72.23 62.60 L 71.63 63.20 L 71.03 63.81 L 70.43 64.41 L 69.83 65.02 L 69.23 65.62 L 68.63 66.22 L 68.03 66.82 L 67.43 67.43 Z" fill="#101418"></path><path d="M 65 33 L 70.14 65 L 65 100 L 59.86 65 Z" fill="#101418"></path></svg><span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-weight:700;font-size:19px;letter-spacing:.2em">IKG</span></a>
+      <nav style="display:flex;flex-wrap:wrap;gap:6px clamp(12px,1.6vw,26px);font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:clamp(11px,1.05vw,12px);color:#363C42;min-width:0">
+        <a href="#vision">Vision</a><a href="#kreislauf">Kreislauf</a><a href="#uniartcity">Uniartcity</a><a href="#angebot">Angebot</a><a href="#institut">Institut</a>
+      </nav>
+      <div style="flex:none;display:flex;align-items:center;gap:clamp(10px,1.4vw,18px)">
+        <button type="button" data-lang-toggle="1" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:clamp(11px,1.05vw,12px);letter-spacing:.06em;background:transparent;border:1px solid #D6DAD8;color:#666E75;padding:12px 14px;cursor:pointer;line-height:1;white-space:nowrap" style-hover="border-color:#101418;color:#101418"><span data-lang-label="1">EN</span></button>
+      <a href="https://tally.so/r/WOOdGL" style="flex:none;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:clamp(11px,1.05vw,12px);letter-spacing:.04em;text-transform:uppercase;background:#C2410C;color:#FFF;padding:13px clamp(14px,1.6vw,22px);white-space:nowrap">Mitglied werden</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="top" style="position:relative;z-index:1;overflow:hidden">
+    <div data-par="0.16" style="position:absolute;top:-160px;right:-120px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle at 42% 42%,#E8B23A 0%,rgba(232,178,58,0) 70%);opacity:.5;pointer-events:none"></div>
+    <div data-par="-0.1" style="position:absolute;top:200px;right:240px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle at 50% 50%,#1B3A5C 0%,rgba(27,58,92,0) 72%);opacity:.24;pointer-events:none"></div>
+    <div data-par="0.24" style="position:absolute;top:246px;right:-72px;width:274px;height:274px;border-radius:50%;border:1px dashed #2E5E85;opacity:.5;pointer-events:none;animation:sSpin 64s linear infinite"></div>
+    <div data-pad="1" style="position:relative;max-width:1560px;margin:0 auto;padding:0 clamp(56px,5.6vw,120px) 0 clamp(66px,6vw,132px);box-sizing:border-box">
+      <div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:12px;color:#666E75;padding:16px 0;border-bottom:1px dashed #D6DAD8">
+        <span>Institut für Kulturgestaltung e.V.</span><span>Bildung · Kulturforschung</span>
+      </div>
+      <h1 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(52px,8.4vw,148px);line-height:.98;letter-spacing:-0.022em;margin:76px 0 0 0;max-width:16ch;overflow-wrap:break-word;text-wrap:balance">Wir erschaffen<br><span style="color:#1B3A5C">Forschungsräume</span></h1>
+      <div data-r="hero" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:56px;margin:52px 0 92px 0;align-items:end">
+        <p style="font-size:24px;line-height:1.46;margin:0;max-width:42ch;color:#363C42">Ein gemeinnütziger Verein für neue Bildung und Kultur. Wir entwickeln, erproben und begleiten selbstbestimmte Bildungs- und Kulturformen, an echten Orten, mit jungen Menschen. Unser sichtbarstes Vorhaben ist die Uniartcity.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="https://tally.so/r/5Bg1ab" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;background:#101418;color:#F3F2EE;padding:20px 30px;white-space:nowrap">Uniartcity entdecken</a>
+          <a href="https://tally.so/r/WOOdGL" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;border:1px solid #101418;color:#101418;padding:20px 30px;white-space:nowrap">Mitglied werden</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vision" style="position:relative;z-index:1;overflow:hidden;background:linear-gradient(132deg,#0A1B2C 0%,#1B3A5C 54%,#2E5E85 100%);color:#E5EDF4">
+    <div data-par="0.18" style="position:absolute;right:-120px;top:-140px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(232,178,58,.4) 0%,rgba(232,178,58,0) 70%);pointer-events:none"></div>
+    <div data-r="vision" data-pad="1" style="position:relative;max-width:1560px;margin:0 auto;padding:92px clamp(56px,5.6vw,120px) 92px clamp(66px,6vw,132px);box-sizing:border-box;display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:52px">
+      <div style="display:flex;align-items:flex-start;gap:14px">
+        <span data-knot="1" style="width:13px;height:13px;border-radius:50%;border:1px solid #E8B23A;flex:none;margin-top:2px"></span>
+        <span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#E8B23A">Vision</span>
+      </div>
+      <div>
+        <p style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(30px,3.8vw,62px);line-height:1.1;margin:0;max-width:22ch;letter-spacing:-0.018em">Die nächste Kultur wird nicht ausgedacht. Sie wird <span style="color:#E8B23A">gelebt</span>.</p>
+        <div data-r="vision3" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(22px,2.4vw,36px);margin-top:56px;border-top:1px solid rgba(255,255,255,.28);padding-top:28px">
+          <p style="font-size:18px;line-height:1.6;margin:0;color:#B3C6D8">Kleine Systeme und soziale Kunstwerke, in denen Neues ausprobiert werden kann.</p>
+          <p style="font-size:18px;line-height:1.6;margin:0;color:#B3C6D8;transform:translateY(16px)">Kollaborationen aus mehreren Organismen, die zusammen echte Resilienz schaffen.</p>
+          <p style="font-size:18px;line-height:1.6;margin:0;color:#B3C6D8">Kreisläufe, in denen Ressourcen fließen statt gehortet zu werden.</p>
+          <p style="font-size:18px;line-height:1.6;margin:0;color:#B3C6D8;transform:translateY(16px)">Bildung, die im Körper ankommt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="leitsatz" data-pad="1" style="position:relative;z-index:1;max-width:1560px;margin:0 auto;padding:104px clamp(56px,5.6vw,120px) 0 clamp(66px,6vw,132px);box-sizing:border-box">
+    <div data-r="half" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(28px,3vw,64px);align-items:start">
+      <p style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(28px,3.2vw,50px);line-height:1.08;letter-spacing:-0.016em;margin:0;max-width:16ch">Nicht nur in der Theorie. In der gelebten Praxis.</p>
+      <p style="font-size:20px;line-height:1.6;margin:0;color:#363C42;max-width:48ch">Bei uns bleibt nichts Konzept. Jede Idee zieht an einen realen Ort, in Wohnen, Bauen, Events, Kochen, Entscheidungen. Erst in der gelebten Praxis zeigt sich, was wirklich trägt.</p>
+    </div>
+  </section>
+
+  <section data-bandsec="1" style="position:relative;z-index:1;margin-top:76px;width:100%">
+    <div data-band="1" style="position:relative;width:100%;aspect-ratio:26/9;min-height:300px">
+      <img src="images/band-handwerk-v2.jpg" alt="Freie Handwerks-Ausbildung, Pflasterarbeiten am Alten Gasthof" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center">
+      <div style="position:absolute;inset:auto 0 0 0;height:72%;background:linear-gradient(to top,rgba(10,17,24,.88) 0%,rgba(10,17,24,.6) 42%,rgba(10,17,24,0) 100%);pointer-events:none"></div>
+      <div data-bandtext="1" style="position:absolute;left:0;right:0;bottom:0;padding:0 clamp(56px,5.6vw,120px) 34px clamp(66px,6vw,132px);box-sizing:border-box;pointer-events:none">
+        <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#E8B23A;margin-bottom:10px">Freie Handwerks-Ausbildung, Flow Forest</div>
+        <p style="font-family: 'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif; font-weight: 400; font-size: clamp(24px,2.8vw,44px); line-height: 1.1; letter-spacing: -0.016em; margin: 0; max-width: 28ch; color: #FFF; text-shadow: 0 1px 24px rgba(0,0,0,.35)">NEU: Freie Handwerks-Ausbildung<br>Junge Menschen bauen den Bildungscampus der Zukunft.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kreislauf" data-pad="1" style="position:relative;z-index:1;max-width:1560px;margin:0 auto;padding:104px clamp(56px,5.6vw,120px) 0 clamp(66px,6vw,132px);box-sizing:border-box">
+    
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #101418;padding-bottom:12px;gap:20px;flex-wrap:wrap">
+        <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap">
+          <span data-knot="1" style="width:13px;height:13px;border-radius:50%;border:1px solid #1B3A5C;flex:none;align-self:center"></span>
+          <h2 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(30px,3vw,46px);line-height:1.02;letter-spacing:-0.015em;margin:0">Wie wir arbeiten</h2>
+        </div>
+        <a href="#kreislauf" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:12px;color:#1B3A5C;border-bottom:1px solid #1B3A5C;padding-bottom:2px;white-space:nowrap">Modell erklärt</a>
+      </div>
+    <div data-r="half" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,4vw,64px);align-items:center;margin-top:52px">
+      <div style="position:relative;width:100%;aspect-ratio:1;max-width:560px;margin:0 auto;container-type:inline-size">
+        <div style="position:absolute;inset:22%;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(232,178,58,.22) 0%,rgba(232,178,58,0) 68%)"></div>
+        <div style="position:absolute;inset:24%;border-radius:50%;border:1px solid #C2C8CB"></div>
+        <div style="position:absolute;inset:24%;border-radius:50%;border:2px dashed #1B3A5C;opacity:.5;animation:sSpin 46s linear infinite"></div>
+        <div style="position:absolute;inset:24%;animation:sSpin 15s linear infinite"><span style="position:absolute;left:50%;top:-1.6cqw;width:3.2cqw;height:3.2cqw;min-width:11px;min-height:11px;border-radius:50%;background:#1B3A5C;transform:translateX(-50%);box-shadow:0 0 0 1.1cqw rgba(27,58,92,.16)"></span></div>
+        <div style="position:absolute;inset:36%;border-radius:50%;border:1px solid #D6DAD8;animation:sSpinBack 70s linear infinite"><span style="position:absolute;left:50%;top:-1.2cqw;width:2.4cqw;height:2.4cqw;min-width:8px;min-height:8px;border-radius:50%;background:#7E9EBB;transform:translateX(-50%)"></span></div>
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:32cqw;text-align:center;font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:clamp(15px,4.4cqw,26px);line-height:1.08;letter-spacing:-0.016em;text-wrap:balance">Neues greifbar machen</div>
+        
+        <span style="position:absolute;left:50%;top:24%;transform:translate(-50%,-50%);width:13cqw;height:13cqw;min-width:44px;min-height:44px;border-radius:50%;background:#1B3A5C;color:#F3F2EE;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:clamp(12px,3cqw,15px);flex:none">01</span>
+        <span style="position:absolute;left:50%;top:1%;transform:translateX(-50%);width:32cqw;text-align:center;font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:clamp(12px,3.4cqw,18px);line-height:1.14;letter-spacing:-0.006em;text-wrap:balance">Forschungsräume öffnen</span>
+        
+        <span style="position:absolute;left:72.5%;top:63%;transform:translate(-50%,-50%);width:13cqw;height:13cqw;min-width:44px;min-height:44px;border-radius:50%;background:#2E5E85;color:#FFF;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:clamp(12px,3cqw,15px);flex:none">02</span>
+        <span style="position:absolute;left:85%;top:73%;transform:translateX(-50%);width:32cqw;text-align:center;font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:clamp(12px,3.4cqw,18px);line-height:1.14;letter-spacing:-0.006em;text-wrap:balance">Verkörperung durch Praxis</span>
+        
+        <span style="position:absolute;left:27.5%;top:63%;transform:translate(-50%,-50%);width:13cqw;height:13cqw;min-width:44px;min-height:44px;border-radius:50%;background:#7E9EBB;color:#101418;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:clamp(12px,3cqw,15px);flex:none">03</span>
+        <span style="position:absolute;left:15%;top:73%;transform:translateX(-50%);width:32cqw;text-align:center;font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:clamp(12px,3.4cqw,18px);line-height:1.14;letter-spacing:-0.006em;text-wrap:balance">Gesellschaftliche Interventionen</span>
+      </div>
+      <div>
+        <div style="border-top:1px solid #D6DAD8">
+          
+          <div data-r="step" style="display:grid;grid-template-columns:62px minmax(0,1fr);gap:24px;padding:26px 0;border-bottom:1px solid #D6DAD8">
+            <span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:22px;color:#1B3A5C">01</span>
+            <div><h3 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:24px;letter-spacing:-0.008em;margin:0 0 7px 0;line-height:1.1">Forschungsräume öffnen</h3><p style="font-size:18px;line-height:1.55;margin:0;color:#666E75">Orte und Formate, in denen Unfertiges erlaubt ist: Gelände und Werkstätten, in denen Menschen zusammen leben und lernen, ebenso wie Veranstaltungen und Netzwerktreffen, bei denen Neues entsteht.</p></div>
+          </div>
+          <div data-r="step" style="display:grid;grid-template-columns:62px minmax(0,1fr);gap:24px;padding:26px 0;border-bottom:1px solid #D6DAD8">
+            <span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:22px;color:#2E5E85">02</span>
+            <div><h3 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:24px;letter-spacing:-0.008em;margin:0 0 7px 0;line-height:1.1">Verkörperung durch Praxis</h3><p style="font-size:18px;line-height:1.55;margin:0;color:#666E75">Gelernt wird durch unmittelbares Ausprobieren, ob beim Bauen, Gründen, Schreiben, Spielen, Singen oder im Digitalen. Und indem die eigenen Erkenntnisse, Werte und Haltungen im Alltag gelebt werden. Der Bildungsbrief macht diesen Weg sichtbar.</p></div>
+          </div>
+          <div data-r="step" style="display:grid;grid-template-columns:62px minmax(0,1fr);gap:24px;padding:26px 0;border-bottom:1px solid #D6DAD8">
+            <span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:22px;color:#456F92">03</span>
+            <div><h3 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:24px;letter-spacing:-0.008em;margin:0 0 7px 0;line-height:1.1">Gesellschaftliche Interventionen</h3><p style="font-size:18px;line-height:1.55;margin:0;color:#666E75">Was in unseren Räumen entsteht, geben wir als Kulturimpulse weiter: als Veranstaltung, Vortrag oder Workshop, als Medium, Werk oder Performance, als Erfahrungsraum oder Produkt. In Schulen, Gemeinden, Organisationen und in die Öffentlichkeit.</p></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:18px;align-items:center;padding-top:24px">
+          <span style="width:28px;height:28px;border-radius:50%;border:1px dashed #2E5E85;display:inline-block;animation:sSpin 9s linear infinite;flex:none"></span>
+          <p style="font-size:21px;line-height:1.35;margin:0;max-width:40ch">Jede Intervention bringt neue Fragen mit oder ist selbst schon ein neuer Forschungsraum. Der Kreis schließt sich.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="uniartcity" data-pad="1" style="position:relative;z-index:1;max-width:1560px;margin:0 auto;padding:110px clamp(56px,5.6vw,120px) 0 clamp(66px,6vw,132px);box-sizing:border-box">
+    
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #101418;padding-bottom:12px;gap:20px;flex-wrap:wrap">
+        <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap">
+          <span data-knot="1" style="width:13px;height:13px;border-radius:50%;border:1px solid #1B3A5C;flex:none;align-self:center"></span>
+          <h2 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(30px,3vw,46px);line-height:1.02;letter-spacing:-0.015em;margin:0">Uniartcity</h2>
+        </div>
+        <a href="https://tally.so/r/5Bg1ab" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:12px;color:#1B3A5C;border-bottom:1px solid #1B3A5C;padding-bottom:2px;white-space:nowrap">Jetzt bewerben</a>
+      </div>
+    <div data-r="half" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,4vw,68px);align-items:center;margin-top:44px">
+      <p style="font-size:22px;line-height:1.46;margin:0;max-width:44ch">Uniartcity ist unser Netz selbstbestimmter Bildungsorte und das zentrale Projekt des IKG. Standorte, zwischen denen Teilnehmende eine vielfältige Kultur gestalten und leben können, jeder mit eigenen Schwerpunkten. Verantwortet werden sie von Flowkeepern. Getragen und gestaltet von allen, die sich vor Ort bilden.</p>
+      <svg width="100%" height="auto" viewBox="0 0 180 120" aria-label="Netz der Standorte" style="display:block;max-width:330px;justify-self:end;width:100%">
+        <path d="M 34.7 44.1 L 75.3 27.1 Q 78.0 26.0, 80.8 26.7 L 124.5 37.2 Q 128.0 38.0, 130.2 40.8 L 153.3 70.6 Q 156.0 74.0, 151.9 75.2 L 90.5 93.3 Q 88.0 94.0, 86.0 92.3 L 33.9 49.2 Q 30.0 46.0, 34.7 44.1 Z" fill="none" stroke="#AEB6BA" stroke-width="2.4"></path>
+        <circle cx="30" cy="46" r="21" fill="none" stroke="#101418" stroke-width="2.9"></circle>
+        <circle cx="78" cy="26" r="12" fill="none" stroke="#1B3A5C" stroke-width="2.7"></circle>
+        <circle cx="128" cy="38" r="15" fill="#2E5E85"></circle>
+        <circle cx="156" cy="74" r="18" fill="none" stroke="#1B3A5C" stroke-width="2.8"></circle>
+        <circle cx="88" cy="94" r="11" fill="none" stroke="#E8B23A" stroke-width="2.5" stroke-dasharray="4 3.4"></circle>
+      </svg>
+    </div>
+
+    <div data-r="orte" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#E1E5E4;border:1px solid #E1E5E4;margin-top:44px">
+      <div style="position:relative;background:#F3F2EE;padding:26px 24px 24px 24px;display:flex;flex-direction:column;gap:0;overflow:hidden">
+        <div style="position:absolute;inset:0"><img src="images/ort-flow-valley.jpg" alt="Flow Valley, Kreßberg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(243,242,238,.74) 0%,rgba(243,242,238,.86) 100%);pointer-events:none"></div>
+        <div style="position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:18px">
+          <span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;color:#666E75">01</span>
+          <svg width="34" height="34" viewBox="0 0 52 52" aria-hidden="true" style="flex:none"><circle cx="26" cy="26" r="13.9" fill="none" stroke="#1B3A5C" stroke-width="2.7"></circle></svg>
+        </div>
+        <h3 style="position:relative;font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:24px;letter-spacing:-0.008em;line-height:1.1;margin:0 0 6px 0">Flow Valley</h3>
+        <div style="position:relative;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75;margin-bottom:14px">Kreßberg, Baden-Württemberg</div>
+        <div style="position:relative;display:inline-flex;align-self:flex-start;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#1B3A5C;background:rgba(243,242,238,.7);border:1px solid #C3C9CC;padding:6px 10px;margin-bottom:14px">Sommerhalbjahr</div>
+        <p style="position:relative;font-size:17px;line-height:1.5;margin:0;color:#363C42">Auf dem Gelände der Gemeinschaft Tempelhof. Leben in Zelten und Tinyhäusern, nah an der Natur. Nur im warmen Halbjahr.</p>
+      </div>
+      <div style="position:relative;background:#F3F2EE;padding:26px 24px 24px 24px;display:flex;flex-direction:column;gap:0;overflow:hidden">
+        <div style="position:absolute;inset:0"><img src="images/ort-flow-forest.jpg" alt="Flow Forest, Weidelbach" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(243,242,238,.74) 0%,rgba(243,242,238,.86) 100%);pointer-events:none"></div>
+        <div style="position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:18px">
+          <span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;color:#666E75">02</span>
+          <svg width="34" height="34" viewBox="0 0 52 52" aria-hidden="true" style="flex:none"><circle cx="26" cy="26" r="18.0" fill="none" stroke="#101418" stroke-width="2.9"></circle></svg>
+        </div>
+        <h3 style="position:relative;font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:24px;letter-spacing:-0.008em;line-height:1.1;margin:0 0 6px 0">Flow Forest</h3>
+        <div style="position:relative;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75;margin-bottom:14px">Weidelbach, Bayern</div>
+        <div style="position:relative;display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px"><a href="https://tally.so/r/5Bg1ab" style="display:inline-flex;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#1B3A5C;background:rgba(243,242,238,.7);border:1px solid #C3C9CC;padding:6px 10px" style-hover="background:#1B3A5C;color:#FFF;border-color:#1B3A5C">Winterhalbjahr</a><a href="https://tally.so/r/5Bg1ab" style="display:inline-flex;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#1B3A5C;background:rgba(243,242,238,.7);border:1px solid #C3C9CC;padding:6px 10px" style-hover="background:#1B3A5C;color:#FFF;border-color:#1B3A5C">Sommerhalbjahr</a></div>
+        <p style="position:relative;font-size:17px;line-height:1.5;margin:0;color:#363C42">Haus, Werkstätten und Wald. Hier laufen das Uniartcity-Semester und die Freie Handwerks-Ausbildung parallel.</p>
+      </div>
+      <div style="position:relative;background:#F3F2EE;padding:26px 24px 24px 24px;display:flex;flex-direction:column;gap:0;overflow:hidden">
+        <div style="position:absolute;inset:0"><img src="images/ort-flow-hills.jpg" alt="Flow Hills, Schönsee" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(243,242,238,.74) 0%,rgba(243,242,238,.86) 100%);pointer-events:none"></div>
+        <div style="position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:18px">
+          <span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;color:#666E75">03</span>
+          <svg width="34" height="34" viewBox="0 0 52 52" aria-hidden="true" style="flex:none"><circle cx="26" cy="26" r="11.5" fill="#2E5E85" stroke="#2E5E85" stroke-width="2.6"></circle></svg>
+        </div>
+        <h3 style="position:relative;font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:24px;letter-spacing:-0.008em;line-height:1.1;margin:0 0 6px 0">Flow Hills</h3>
+        <div style="position:relative;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75;margin-bottom:14px">Schönsee, Bayern</div>
+        <div style="position:relative;display:inline-flex;align-self:flex-start;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#1B3A5C;background:rgba(243,242,238,.7);border:1px solid #C3C9CC;padding:6px 10px;margin-bottom:14px">Winterhalbjahr</div>
+        <p style="position:relative;font-size:17px;line-height:1.5;margin:0;color:#363C42">Im ehemaligen Jagdmuseum, bei der Nature Community. Nur im kalten Halbjahr.</p>
+      </div>
+    </div>
+
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px">
+      <a href="https://tally.so/r/5Bg1ab" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:12px;letter-spacing:.04em;text-transform:uppercase;background:#101418;color:#F3F2EE;padding:17px 26px">Jetzt bewerben</a>
+    </div>
+  </section>
+
+  <section id="angebot" data-pad="1" style="position:relative;z-index:1;max-width:1560px;margin:0 auto;padding:110px clamp(56px,5.6vw,120px) 0 clamp(66px,6vw,132px);box-sizing:border-box">
+    
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #101418;padding-bottom:12px;gap:20px;flex-wrap:wrap">
+        <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap">
+          <span data-knot="1" style="width:13px;height:13px;border-radius:50%;border:1px solid #1B3A5C;flex:none;align-self:center"></span>
+          <h2 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(30px,3vw,46px);line-height:1.02;letter-spacing:-0.015em;margin:0">Wo du mitmachen kannst</h2>
+        </div>
+      </div>
+    
+    <div data-r="angebot" style="position:relative;display:grid;grid-template-columns:minmax(0,150px) minmax(240px,1fr) minmax(0,150px) minmax(0,170px);gap:clamp(16px,2vw,30px);padding:30px 0;border-bottom:1px solid #D6DAD8;align-items:center;">
+      
+      <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:13px;color:#1B3A5C">Bewerbung läuft</div>
+      <div><h3 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:26px;letter-spacing:-0.012em;margin:0 0 4px 0;line-height:1.1"><a href="https://tally.so/r/5Bg1ab">Uniartcity-Semester</a></h3><p style="font-size:17px;line-height:1.5;margin:0;color:#666E75">Selbstbestimmt leben und lernen, mit dem Bildungsbrief als selbstgeschriebenem Curriculum.</p></div>
+      <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75">Alle Standorte</div>
+      <div style="justify-self:end"><a href="https://tally.so/r/5Bg1ab" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;background:#1B3A5C;color:#FFF;padding:8px 14px;white-space:nowrap" style-hover="opacity:.82">Jetzt bewerben</a></div>
+    </div>
+    <div data-r="angebot" style="position:relative;display:grid;grid-template-columns:minmax(0,150px) minmax(240px,1fr) minmax(0,150px) minmax(0,170px);gap:clamp(16px,2vw,30px);padding:30px 24px;border-bottom:1px solid #D6DAD8;align-items:center;background:linear-gradient(100deg,rgba(232,178,58,.22),rgba(232,178,58,0));margin-left:clamp(0px,3vw,52px);">
+      <span style="position:absolute;left:-13px;top:50%;width:26px;height:26px;border-radius:50%;background:#E8B23A;transform:translateY(-50%)"></span>
+      <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:13px;color:#8A6A18">Neu, ab Winter</div>
+      <div><h3 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:26px;letter-spacing:-0.012em;margin:0 0 4px 0;line-height:1.1"><a href="https://tally.so/r/5Bg1ab">Freie Handwerks-Ausbildung</a></h3><p style="font-size:17px;line-height:1.5;margin:0;color:#666E75">Paralleler Strang für bis zu sechs junge Menschen, die sich ihren eigenen Raum selbst bauen. Fokus: nachhaltiges, naturnahes Bauen.</p></div>
+      <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75">Flow Forest</div>
+      <div style="justify-self:end"><a href="https://tally.so/r/5Bg1ab" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;background:#101418;color:#F3F2EE;padding:8px 14px;white-space:nowrap" style-hover="opacity:.82">Sechs Plätze</a></div>
+    </div>
+    <div data-r="angebot" style="position:relative;display:grid;grid-template-columns:minmax(0,150px) minmax(240px,1fr) minmax(0,150px) minmax(0,170px);gap:clamp(16px,2vw,30px);padding:30px 0;border-bottom:1px solid #D6DAD8;align-items:center;">
+      
+      <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:13px;color:#1B3A5C">26. September 2026</div>
+      <div><h3 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:26px;letter-spacing:-0.012em;margin:0 0 4px 0;line-height:1.1"><a href="https://tally.so/r/LZjzqO">Bildungsbrief-Gala</a></h3><p style="font-size:17px;line-height:1.5;margin:0;color:#666E75">Semesterabschluss, offen für alle, die diese andere Bildungskultur miterleben wollen.</p></div>
+      <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75">Flow Forest</div>
+      <div style="justify-self:end"><a href="https://tally.so/r/LZjzqO" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;background:#1B3A5C;color:#FFF;padding:8px 14px;white-space:nowrap" style-hover="opacity:.82">Anmeldung offen</a></div>
+    </div>
+  </section>
+
+
+
+  <section data-bandsec="1" style="position:relative;z-index:1;margin-top:110px;width:100%">
+    <div data-band="1" style="position:relative;width:100%;aspect-ratio:40/9;min-height:240px">
+      <img src="images/band-fv-schmal.jpg" alt="Flow Valley aus der Luft" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center">
+      <div style="position:absolute;inset:auto 0 0 0;height:72%;background:linear-gradient(to top,rgba(10,17,24,.88) 0%,rgba(10,17,24,.6) 42%,rgba(10,17,24,0) 100%);pointer-events:none"></div>
+      <div data-bandtext="1" style="position:absolute;left:0;right:0;bottom:0;padding:0 clamp(56px,5.6vw,120px) 34px clamp(66px,6vw,132px);box-sizing:border-box;pointer-events:none">
+        <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#E8B23A;margin-bottom:10px">Uniartcity</div>
+        <p style="font-family: 'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif; font-weight: 400; font-size: clamp(24px,2.8vw,44px); line-height: 1.1; letter-spacing: -0.016em; margin: 0; max-width: 28ch; color: #FFF; text-shadow: 0 1px 24px rgba(0,0,0,.35)">Mehrere Orte, ab einem Semester,<br>dein selbstgeschriebener Lernweg.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="institut" data-pad="1" style="position:relative;z-index:1;max-width:1560px;margin:0 auto;padding:84px clamp(56px,5.6vw,120px) 0 clamp(66px,6vw,132px);box-sizing:border-box">
+    
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #101418;padding-bottom:12px;gap:20px;flex-wrap:wrap">
+        <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap">
+          <span data-knot="1" style="width:13px;height:13px;border-radius:50%;border:1px solid #1B3A5C;flex:none;align-self:center"></span>
+          <h2 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(30px,3vw,46px);line-height:1.02;letter-spacing:-0.015em;margin:0">Institut</h2>
+        </div>
+        <a href="#footer" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:12px;color:#1B3A5C;border-bottom:1px solid #1B3A5C;padding-bottom:2px;white-space:nowrap">Kontakt aufnehmen</a>
+      </div>
+    <div data-r="half" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,3.4vw,64px);margin-top:44px;align-items:start">
+      <div>
+        <p style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(26px,2.6vw,38px);line-height:1.2;letter-spacing:-0.014em;margin:0;max-width:24ch">Ein gemeinnütziger Verein für neue Bildung und Kultur.</p>
+        <div style="display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75">
+          <span>Gegründet 2019</span><span>Sitz Weidelbach</span><span>Sechs Arbeitsfelder</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#1B3A5C;padding-bottom:12px;border-bottom:1px solid #D6DAD8">Arbeitsfelder</div>
+        <div data-r="feld" style="display:grid;grid-template-columns:30px minmax(0,140px) minmax(0,1fr);gap:18px;padding:18px 0;border-bottom:1px solid #E1E5E4;align-items:start">
+          <svg width="30" height="30" viewBox="0 0 52 52" aria-hidden="true" style="flex:none;margin-top:2px"><path d="M 26 17.5 C 21.5 13.5, 14.5 12.5, 8 13.5 L 8 37 C 14.5 36, 21.5 37, 26 41 Z" fill="none" stroke="#101418" stroke-width="2.5" stroke-linejoin="round"></path><path d="M 26 17.5 C 30.5 13.5, 37.5 12.5, 44 13.5 L 44 37 C 37.5 36, 30.5 37, 26 41 Z" fill="#1B3A5C"></path><path d="M 26 17.5 L 26 41" fill="none" stroke="#101418" stroke-width="2.5" stroke-linecap="round"></path></svg>
+          <span style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:20px;letter-spacing:-0.005em;line-height:1.5">Bildung</span>
+          <p style="font-size:17px;line-height:1.5;margin:0;color:#363C42">Bildungsforschung und selbstbestimmtes Lernen. Kunst als Bildungsmedium.</p>
+        </div>
+        <div data-r="feld" style="display:grid;grid-template-columns:30px minmax(0,140px) minmax(0,1fr);gap:18px;padding:18px 0;border-bottom:1px solid #E1E5E4;align-items:start">
+          <svg width="30" height="30" viewBox="0 0 52 52" aria-hidden="true" style="flex:none;margin-top:2px"><circle cx="26" cy="12.5" r="6.6" fill="none" stroke="#101418" stroke-width="2.7"></circle><circle cx="38.5" cy="28" r="5.6" fill="#1B3A5C"></circle><circle cx="13.5" cy="28" r="5.6" fill="none" stroke="#1B3A5C" stroke-width="2.6"></circle><circle cx="33" cy="43.5" r="4.4" fill="none" stroke="#1B3A5C" stroke-width="2.4"></circle><circle cx="19" cy="43.5" r="4.4" fill="#1B3A5C"></circle></svg>
+          <span style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:20px;letter-spacing:-0.005em;line-height:1.5">Jugend</span>
+          <p style="font-size:17px;line-height:1.5;margin:0;color:#363C42">Jugendhilfe, Demokratie und Teilhabe. Begleitung junger Menschen an echten Orten.</p>
+        </div>
+        <div data-r="feld" style="display:grid;grid-template-columns:30px minmax(0,140px) minmax(0,1fr);gap:18px;padding:18px 0;border-bottom:1px solid #E1E5E4;align-items:start">
+          <svg width="30" height="30" viewBox="0 0 52 52" aria-hidden="true" style="flex:none;margin-top:2px"><path d="M 26.0 8.0 A 18 18 0 0 1 34.5 41.9" fill="none" stroke="#101418" stroke-width="2.6" stroke-linecap="round"></path><path d="M 40.8 41.7 L 34.5 41.9 L 38.2 36.7" fill="none" stroke="#101418" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"></path><path d="M 26.0 44.0 A 18 18 0 0 1 17.5 10.1" fill="none" stroke="#1B3A5C" stroke-width="2.6" stroke-linecap="round"></path><path d="M 11.2 10.3 L 17.5 10.1 L 13.8 15.3" fill="none" stroke="#1B3A5C" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"></path><circle cx="26" cy="26" r="3.4" fill="#E8B23A"></circle></svg>
+          <span style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:20px;letter-spacing:-0.005em;line-height:1.5">Wirtschaft</span>
+          <p style="font-size:17px;line-height:1.5;margin:0;color:#363C42">Experimente mit Schenkökonomie und neuen Geldformen. Kreisläufe, in denen Ressourcen fließen.</p>
+        </div>
+        <div data-r="feld" style="display:grid;grid-template-columns:30px minmax(0,140px) minmax(0,1fr);gap:18px;padding:18px 0;border-bottom:1px solid #E1E5E4;align-items:start">
+          <svg width="30" height="30" viewBox="0 0 52 52" aria-hidden="true" style="flex:none;margin-top:2px"><path d="M 7 14 L 22 9 L 36 14 L 45 10 L 45 40 L 30 45 L 16 40 L 7 44 Z" fill="none" stroke="#101418" stroke-width="2.4" stroke-linejoin="round"></path><path d="M 26 38.5 C 22.4 31.5, 19.5 28.3, 19.5 24.5 A 6.5 6.5 0 1 1 32.5 24.5 C 32.5 28.3, 29.6 31.5, 26 38.5 Z" fill="#1B3A5C"></path><circle cx="26" cy="24.2" r="2.3" fill="#F3F2EE"></circle></svg>
+          <span style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:20px;letter-spacing:-0.005em;line-height:1.5">Grund und Boden</span>
+          <p style="font-size:17px;line-height:1.5;margin:0;color:#363C42">Gelände langfristig für einen Zweck sichern und aus dem spekulativen Markt herausnehmen.</p>
+        </div>
+        <div data-r="feld" style="display:grid;grid-template-columns:30px minmax(0,140px) minmax(0,1fr);gap:18px;padding:18px 0;border-bottom:1px solid #E1E5E4;align-items:start">
+          <svg width="30" height="30" viewBox="0 0 52 52" aria-hidden="true" style="flex:none;margin-top:2px"><circle cx="26" cy="26" r="19" fill="none" stroke="#101418" stroke-width="2.6"></circle><circle cx="19" cy="21" r="7" fill="none" stroke="#1B3A5C" stroke-width="2.5"></circle><circle cx="32" cy="24" r="5.5" fill="none" stroke="#1B3A5C" stroke-width="2.5"></circle><circle cx="25" cy="35" r="5" fill="#E8B23A"></circle></svg>
+          <span style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:20px;letter-spacing:-0.005em;line-height:1.5">Methoden</span>
+          <p style="font-size:17px;line-height:1.5;margin:0;color:#363C42">Soziokratie 3.0 und andere Verfahren. Wir kombinieren bestehende Ansätze und entwickeln sie in der Praxis weiter.</p>
+        </div>
+        <div data-r="feld" style="display:grid;grid-template-columns:30px minmax(0,140px) minmax(0,1fr);gap:18px;padding:18px 0;border-bottom:1px solid #D6DAD8;align-items:start">
+          <svg width="30" height="30" viewBox="0 0 52 52" aria-hidden="true" style="flex:none;margin-top:2px"><circle cx="23" cy="22" r="13.5" fill="none" stroke="#101418" stroke-width="2.7"></circle><path d="M 32.6 31.6 L 44 43" fill="none" stroke="#101418" stroke-width="3" stroke-linecap="round"></path><path d="M 16 27 L 20.5 20 L 25 24.5 L 30 15" fill="none" stroke="#1B3A5C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></path><circle cx="30" cy="15" r="2.4" fill="#E8B23A"></circle></svg>
+          <span style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:20px;letter-spacing:-0.005em;line-height:1.5">Wissenschaft</span>
+          <p style="font-size:17px;line-height:1.5;margin:0;color:#363C42">Forschung, Beratung und Vernetzung über die eigenen Orte hinaus.</p>
+        </div>
+        <p style="font-size:17px;line-height:1.55;margin:18px 0 0 0;color:#666E75;max-width:52ch">Die Uniartcity ist unser sichtbarstes Projekt. Darüber hinaus forschen, beraten und vernetzen wir.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="vorstand" data-pad="1" style="position:relative;z-index:1;max-width:1560px;margin:0 auto;padding:84px clamp(56px,5.6vw,120px) 0 clamp(66px,6vw,132px);box-sizing:border-box">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #101418;padding-bottom:12px;gap:20px;flex-wrap:wrap">
+      <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap">
+        <span data-knot="1" style="width:13px;height:13px;border-radius:50%;border:1px solid #1B3A5C;flex:none;align-self:center"></span>
+        <h2 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(30px,3vw,46px);line-height:1.02;letter-spacing:-0.015em;margin:0">Vorstand</h2>
+      </div>
+      <span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:12px;color:#666E75">Drei Personen</span>
+    </div>
+    <div data-r="vorstand" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.2vw,34px);margin-top:40px;max-width:1080px">
+      <div>
+        <div style="position:relative;width:100%;aspect-ratio:3/4;margin-bottom:16px;overflow:hidden">
+          <img src="images/vorstand-michael.jpg" alt="Michael Schoett" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 0%;transform:scale(1.24) translateY(-5%);transform-origin:center 0%">
+        </div>
+        <h3 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:21px;letter-spacing:-0.006em;line-height:1.15;margin:0 0 5px 0">Michael Schoett</h3>
+        <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75">Initiator IKG, Vorstand, Co-Founder Uniartcity</div>
+      </div>
+      <div>
+        <div style="position:relative;width:100%;aspect-ratio:3/4;margin-bottom:16px;overflow:hidden">
+          <img src="images/vorstand-luisa.jpg" alt="Luisa Schmidt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;transform:scale(1.05);transform-origin:center 22%">
+        </div>
+        <h3 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:21px;letter-spacing:-0.006em;line-height:1.15;margin:0 0 5px 0">Luisa Schmidt</h3>
+        <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75">Vorstand</div>
+      </div>
+      <div>
+        <div style="position:relative;width:100%;aspect-ratio:3/4;margin-bottom:16px;overflow:hidden">
+          <img src="images/vorstand-simon.jpg" alt="Simon Marian Hoffmann" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%">
+        </div>
+        <h3 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:21px;letter-spacing:-0.006em;line-height:1.15;margin:0 0 5px 0">Simon Marian Hoffmann</h3>
+        <div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75">Vorstand, Co-Founder Uniartcity</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mitglied" style="position:relative;z-index:1;overflow:hidden;background:linear-gradient(118deg,#0A1B2C 0%,#1B3A5C 56%,#2E5E85 100%);color:#E5EDF4;margin-top:110px">
+    <div data-par="0.14" style="position:absolute;left:-150px;bottom:-220px;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle at 45% 45%,rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 70%);pointer-events:none"></div>
+    <div data-r="half" data-pad="1" style="position:relative;max-width:1560px;margin:0 auto;padding:88px clamp(56px,5.6vw,120px) 88px clamp(66px,6vw,132px);box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:clamp(44px,4vw,72px);align-items:start">
+      <div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px">
+          <span data-knot="1" style="width:13px;height:13px;border-radius:50%;border:1px solid #FFF;flex:none"></span>
+          <span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#FFF">Mitglied werden</span>
+        </div>
+        <h2 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(32px,3.6vw,58px);letter-spacing:-0.018em;line-height:1.1;margin:0 0 24px 0;max-width:19ch">Mitglieder tragen die Arbeit des IKG, ideell und finanziell.</h2>
+        <p style="font-size:20px;line-height:1.6;margin:0;max-width:46ch;color:#B3C6D8">Ab 5 € im Monat, frei wählbar. Der Beitrag hält Orte, Verein und die Bildungsbegleitung am Laufen. Viele Mitglieder waren zuerst Teilnehmende.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:34px">
+          <a href="https://tally.so/r/WOOdGL" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;background:#FFF;color:#0A1B2C;padding:20px 34px" style-hover="background:#E8B23A">Beitreten</a>
+          <a href="https://tally.so/r/aQplpE" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;border:1px solid rgba(255,255,255,.45);color:#E5EDF4;padding:20px 34px" style-hover="border-color:#FFFFFF">Zum Mitgliederkreis</a>
+        </div>
+      </div>
+      <div data-r="stats" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.22)">
+        <div style="background:rgba(255,255,255,.06);padding:24px"><div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#9FB6CB;margin-bottom:10px">Beitrag</div><div style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:34px;line-height:1;letter-spacing:-0.01em">ab 5 € / Monat</div></div>
+        <div style="background:rgba(255,255,255,.06);padding:24px"><div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#9FB6CB;margin-bottom:10px">Höhe</div><div style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:500;font-size:34px;line-height:1;letter-spacing:-0.01em">frei wählbar</div></div>
+        <div style="background:rgba(255,255,255,.06);padding:24px;grid-column:span 2"><div style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#9FB6CB;margin-bottom:12px">Enthalten</div><div style="display:grid;gap:9px;font-size:19px;line-height:1.35"><span>Einladung zu den monatlichen Mitgliederkreisen</span><span>Vergünstigte Teilnahme an verschiedenen Projekten</span><span>Für ordentliche Mitglieder: Stimmrecht im Verein</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" data-pad="1" style="position:relative;z-index:1;max-width:1560px;margin:0 auto;padding:84px clamp(56px,5.6vw,120px) 0 clamp(66px,6vw,132px);box-sizing:border-box">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #101418;padding-bottom:12px;gap:20px;flex-wrap:wrap">
+      <div style="display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap">
+        <span data-knot="1" style="width:13px;height:13px;border-radius:50%;border:1px solid #1B3A5C;flex:none;align-self:center"></span>
+        <h2 style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(30px,3vw,46px);line-height:1.02;letter-spacing:-0.015em;margin:0">Kontakt</h2>
+      </div>
+      <a href="mailto:team@kultur-gestaltung.de" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:12px;color:#1B3A5C;border-bottom:1px solid #1B3A5C;padding-bottom:2px;white-space:nowrap">team@kultur-gestaltung.de</a>
+    </div>
+    <div data-r="half" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,3.4vw,64px);margin-top:40px;align-items:start">
+      <div>
+        <p style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(24px,2.4vw,34px);line-height:1.22;letter-spacing:-0.014em;margin:0;max-width:24ch">Schreib uns, wenn du mitforschen, ein Gelände anbieten oder uns besuchen willst.</p>
+        <div style="border-top:1px solid #D6DAD8;margin-top:28px">
+          <div style="display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr);gap:18px;padding:14px 0;border-bottom:1px solid #E1E5E4;align-items:baseline"><span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75">E-Mail</span><a href="mailto:team@kultur-gestaltung.de" style="font-size:18px;color:#101418">team@kultur-gestaltung.de</a></div>
+          <div style="display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr);gap:18px;padding:14px 0;border-bottom:1px solid #E1E5E4;align-items:baseline"><span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75">Post</span><span style="font-size:18px">Weidelbach 14, 91550 Dinkelsbühl</span></div>
+          <div style="display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr);gap:18px;padding:14px 0;align-items:baseline"><span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75">Besuch</span><span style="font-size:18px;color:#363C42">Nach Absprache an allen Orten</span></div>
+        </div>
+      </div>
+      <form data-r="form" data-mailform="1" style="display:grid;gap:16px;border:1px solid #D6DAD8;padding:clamp(24px,2.4vw,34px)">
+        <label style="display:grid;gap:7px"><span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#666E75">Name</span><input type="text" name="name" style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-size:18px;padding:12px 14px;border:1px solid #D6DAD8;background:#FFF;color:#101418;box-sizing:border-box;width:100%"></label>
+        <label style="display:grid;gap:7px"><span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#666E75">E-Mail</span><input type="email" name="email" style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-size:18px;padding:12px 14px;border:1px solid #D6DAD8;background:#FFF;color:#101418;box-sizing:border-box;width:100%"></label>
+        <label style="display:grid;gap:7px"><span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#666E75">Worum geht es?</span><select name="anliegen" style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-size:18px;padding:12px 14px;border:1px solid #D6DAD8;background:#FFF;color:#101418;box-sizing:border-box;width:100%"><option>Freie Handwerks-Ausbildung</option><option>Semesterbewerbung</option><option>Als Gast besuchen</option><option>Volunteering</option><option>Mitgliedschaft</option><option>Zusammenarbeit</option><option>Gelände anbieten</option><option>Anderes</option></select></label>
+        <label style="display:grid;gap:7px"><span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#666E75">Nachricht</span><textarea name="nachricht" rows="5" style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-size:18px;padding:12px 14px;border:1px solid #D6DAD8;background:#FFF;color:#101418;box-sizing:border-box;width:100%;resize:vertical"></textarea></label>
+        <button type="submit" style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:12px;letter-spacing:.04em;text-transform:uppercase;background:#101418;color:#F3F2EE;padding:17px 26px;border:0;cursor:pointer;justify-self:start">Nachricht per E-Mail senden</button>
+        <p style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;line-height:1.7;margin:0;color:#666E75">Öffnet dein E-Mail-Programm mit der fertigen Nachricht. Nichts wird auf dieser Seite gespeichert.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer id="footer" style="position:relative;z-index:1;margin-top:150px;border-top:2px solid #101418">
+    <div data-r="footer" data-pad="1" style="max-width:1560px;margin:0 auto;padding:64px clamp(56px,5.6vw,120px) 40px clamp(66px,6vw,132px);box-sizing:border-box;display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,3vw,44px)">
+      <div style="min-width:0">
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px"><svg width="40" height="40" viewBox="0 0 130 130" aria-label="IKG"><path d="M 68.37 16.86 L 66.69 16.73 L 65.00 16.66 L 63.31 16.64 L 61.62 16.69 L 59.93 16.80 L 58.25 16.97 L 56.58 17.20 L 54.90 17.48 L 53.24 17.84 L 51.59 18.25 L 49.96 18.72 L 48.34 19.24 L 46.74 19.82 L 45.17 20.47 L 43.62 21.17 L 42.09 21.92 L 40.59 22.72 L 39.12 23.58 L 37.67 24.49 L 36.26 25.45 L 34.89 26.46 L 33.55 27.52 L 32.25 28.63 L 30.99 29.78 L 29.76 30.97 L 28.58 32.21 L 27.45 33.49 L 26.36 34.81 L 25.31 36.17 L 24.33 37.56 L 23.38 39.00 L 22.48 40.46 L 21.65 41.95 L 20.86 43.47 L 20.13 45.03 L 19.46 46.60 L 18.85 48.20 L 18.29 49.82 L 17.79 51.46 L 17.36 53.12 L 16.98 54.80 L 16.68 56.48 L 16.43 58.18 L 16.25 59.88 L 16.13 61.58 L 16.08 63.29 L 16.08 65.00 L 16.16 66.71 L 16.30 68.41 L 16.49 70.10 L 16.76 71.78 L 17.09 73.45 L 17.48 75.10 L 17.93 76.74 L 18.44 78.35 L 19.00 79.94 L 19.64 81.51 L 20.32 83.06 L 21.05 84.57 L 21.84 86.06 L 22.67 87.50 L 23.56 88.93 L 24.49 90.32 L 25.47 91.66 L 26.49 92.98 L 27.55 94.25 L 28.66 95.49 L 29.80 96.69 L 30.97 97.86 L 32.19 98.98 L 33.43 100.07 L 34.70 101.11 L 36.01 102.11 L 37.33 103.08 L 38.69 104.00 L 40.08 104.88 L 41.49 105.72 L 42.92 106.52 L 44.38 107.28 L 45.85 108.00 L 47.36 108.67 L 48.87 109.30 L 50.42 109.89 L 51.97 110.43 L 53.55 110.92 L 55.15 111.36 L 56.75 111.77 L 58.38 112.12 L 60.02 112.42 L 61.66 112.66 L 63.33 112.86 L 65.00 113.01 L 66.68 113.10 L 68.37 113.12 L 70.06 113.10 L 71.75 113.01 L 73.44 112.87 L 75.13 112.67 L 76.82 112.40 L 78.49 112.06 L 80.16 111.67 L 81.83 111.21 L 83.46 110.70 L 85.09 110.11 L 86.68 109.46 L 88.26 108.75 L 89.82 107.97 L 91.33 107.14 L 92.81 106.24 L 94.26 105.28 L 95.68 104.27 L 97.04 103.19 L 98.37 102.06 L 99.65 100.87 L 100.87 99.64 L 102.05 98.36 L 103.18 97.03 L 104.24 95.66 L 105.25 94.25 L 106.21 92.80 L 107.09 91.30 L 107.93 89.78 L 108.70 88.24 L 109.41 86.66 L 110.06 85.06 L 110.65 83.44 L 111.17 81.80 L 111.63 80.15 L 112.03 78.49 L 112.37 76.81 L 112.65 75.13 L 112.87 73.44 L 113.03 71.75 L 113.13 70.06 L 113.18 68.37 L 113.17 66.68 L 113.10 65.00 L 112.97 63.33 L 112.80 61.66 L 112.72 61.10 L 105.94 61.66 L 105.99 62.14 L 106.12 63.56 L 106.19 65.00 L 106.20 66.44 L 106.16 67.88 L 106.07 69.32 L 105.92 70.75 L 105.71 72.17 L 105.44 73.60 L 105.13 75.01 L 104.76 76.40 L 104.33 77.78 L 103.86 79.14 L 103.33 80.49 L 102.76 81.82 L 102.14 83.11 L 101.47 84.39 L 100.75 85.64 L 100.00 86.87 L 99.19 88.06 L 98.34 89.23 L 97.46 90.36 L 96.53 91.47 L 95.58 92.53 L 94.58 93.56 L 93.55 94.57 L 92.48 95.52 L 91.39 96.45 L 90.26 97.33 L 89.11 98.18 L 87.92 98.98 L 86.71 99.74 L 85.47 100.47 L 84.22 101.14 L 82.94 101.77 L 81.64 102.36 L 80.31 102.91 L 78.98 103.41 L 77.63 103.87 L 76.26 104.27 L 74.88 104.62 L 73.48 104.92 L 72.09 105.18 L 70.68 105.39 L 69.26 105.55 L 67.84 105.66 L 66.42 105.70 L 65.00 105.71 L 63.58 105.66 L 62.17 105.57 L 60.75 105.41 L 59.34 105.21 L 57.96 104.95 L 56.57 104.65 L 55.21 104.29 L 53.85 103.89 L 52.51 103.43 L 51.19 102.93 L 49.89 102.39 L 48.62 101.79 L 47.37 101.15 L 46.15 100.47 L 44.94 99.75 L 43.77 98.98 L 42.63 98.17 L 41.51 97.33 L 40.42 96.45 L 39.38 95.54 L 38.36 94.59 L 37.37 93.61 L 36.42 92.60 L 35.50 91.56 L 34.62 90.49 L 33.77 89.40 L 32.96 88.28 L 32.18 87.14 L 31.44 85.97 L 30.73 84.79 L 30.06 83.58 L 29.42 82.35 L 28.82 81.11 L 28.25 79.84 L 27.72 78.57 L 27.24 77.27 L 26.79 75.95 L 26.37 74.63 L 26.00 73.29 L 25.67 71.94 L 25.37 70.57 L 25.13 69.19 L 24.91 67.80 L 24.75 66.41 L 24.63 65.00 L 24.56 63.59 L 24.53 62.17 L 24.56 60.75 L 24.62 59.32 L 24.75 57.90 L 24.92 56.48 L 25.14 55.06 L 25.42 53.65 L 25.74 52.25 L 26.12 50.85 L 26.55 49.47 L 27.05 48.10 L 27.59 46.75 L 28.18 45.42 L 28.83 44.12 L 29.53 42.83 L 30.28 41.59 L 31.09 40.36 L 31.94 39.17 L 32.84 38.01 L 33.79 36.90 L 34.79 35.82 L 35.82 34.79 L 36.90 33.79 L 38.02 32.85 L 39.18 31.95 L 40.37 31.10 L 41.59 30.29 L 42.84 29.54 L 44.12 28.84 L 45.43 28.19 L 46.76 27.60 L 48.11 27.06 L 49.48 26.57 L 50.86 26.13 L 52.25 25.75 L 53.66 25.42 L 55.07 25.15 L 56.48 24.92 L 57.90 24.75 L 59.33 24.63 L 60.75 24.55 L 62.17 24.53 L 63.59 24.56 L 65.00 24.62 L 66.40 24.74 L 67.80 24.91 A 4.03 4.03 0 0 0 68.37 16.86 Z" fill="#101418"></path><path d="M 64.00 61.55 L 66.50 61.46 L 69.00 61.31 L 71.50 61.12 L 74.00 60.93 L 76.50 60.76 L 79.00 60.66 L 81.50 60.62 L 84.00 60.65 L 86.50 60.72 L 89.00 60.81 L 91.50 60.90 L 94.00 60.94 L 96.50 60.95 L 99.00 60.93 L 101.50 60.90 L 104.00 60.89 L 106.50 60.92 L 109.00 61.01 L 111.50 61.15 L 111.50 69.21 L 109.00 69.18 L 106.50 69.09 L 104.00 68.95 L 101.50 68.76 L 99.00 68.59 L 96.50 68.43 L 94.00 68.35 L 91.50 68.33 L 89.00 68.39 L 86.50 68.50 L 84.00 68.63 L 81.50 68.75 L 79.00 68.83 L 76.50 68.88 L 74.00 68.88 L 71.50 68.87 L 69.00 68.86 L 66.50 68.88 L 64.00 68.95 Z" fill="#101418"></path><path d="M 62.57 62.57 L 63.18 61.97 L 63.78 61.37 L 64.38 60.77 L 64.98 60.17 L 65.59 59.57 L 66.19 58.97 L 66.80 58.37 L 67.40 57.77 L 68.00 57.17 L 68.61 56.58 L 69.22 55.98 L 69.82 55.38 L 70.43 54.79 L 71.04 54.19 L 71.65 53.60 L 72.25 53.00 L 72.86 52.41 L 73.47 51.81 L 74.08 51.22 L 74.70 50.63 L 75.31 50.04 L 75.92 49.45 L 76.53 48.85 L 77.14 48.26 L 77.76 47.68 L 78.37 47.09 L 78.99 46.50 L 79.60 45.91 L 80.22 45.32 L 80.84 44.74 L 81.45 44.15 L 82.07 43.57 L 82.69 42.98 L 83.31 42.40 L 83.93 41.81 L 84.55 41.23 L 85.17 40.65 L 85.79 40.07 L 86.42 39.49 L 87.04 38.91 L 87.66 38.33 L 88.29 37.75 L 88.91 37.17 L 89.54 36.59 L 90.17 36.02 L 90.79 35.44 L 91.42 34.87 L 92.05 34.29 A 2.59 2.59 0 0 1 95.71 37.95 L 95.13 38.58 L 94.56 39.21 L 93.98 39.83 L 93.41 40.46 L 92.83 41.09 L 92.25 41.71 L 91.67 42.34 L 91.09 42.96 L 90.51 43.58 L 89.93 44.21 L 89.35 44.83 L 88.77 45.45 L 88.19 46.07 L 87.60 46.69 L 87.02 47.31 L 86.43 47.93 L 85.85 48.55 L 85.26 49.16 L 84.68 49.78 L 84.09 50.40 L 83.50 51.01 L 82.91 51.63 L 82.32 52.24 L 81.74 52.86 L 81.15 53.47 L 80.55 54.08 L 79.96 54.69 L 79.37 55.30 L 78.78 55.92 L 78.19 56.53 L 77.59 57.14 L 77.00 57.75 L 76.40 58.35 L 75.81 58.96 L 75.21 59.57 L 74.62 60.18 L 74.02 60.78 L 73.42 61.39 L 72.83 62.00 L 72.23 62.60 L 71.63 63.20 L 71.03 63.81 L 70.43 64.41 L 69.83 65.02 L 69.23 65.62 L 68.63 66.22 L 68.03 66.82 L 67.43 67.43 Z" fill="#101418"></path><path d="M 65 33 L 70.14 65 L 65 100 L 59.86 65 Z" fill="#101418"></path></svg><span style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-weight:700;font-size:21px;letter-spacing:.2em">IKG</span></div>
+        <p style="font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-weight:400;font-size:22px;line-height:1.3;letter-spacing:-0.01em;margin:0 0 16px 0;max-width:26ch;color:#363C42">Institut für Kulturgestaltung e.V., gemeinnützig.</p>
+        <p style="font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:12px;line-height:1.9;margin:0;color:#666E75">Weidelbach 14<br>91550 Dinkelsbühl<br><a href="mailto:team@kultur-gestaltung.de">team@kultur-gestaltung.de</a></p>
+      </div>
+      
+      <div style="display:flex;flex-direction:column;gap:11px;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:12px;color:#363C42"><span style="color:#1B3A5C;font-size:11px;letter-spacing:.06em;text-transform:uppercase">Mitmachen</span><a href="https://tally.so/r/WOOdGL">Mitgliedschaft</a><a href="https://tally.so/r/WOOdGL">Fördern</a><a href="https://tally.so/r/aQplpE">Mitgliederkreis</a></div>
+      <div style="display:flex;flex-direction:column;gap:11px;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:12px;color:#363C42"><span style="color:#1B3A5C;font-size:11px;letter-spacing:.06em;text-transform:uppercase">Uniartcity</span><a href="https://tally.so/r/5Bg1ab">Semester</a><a href="https://tally.so/r/LZjzqO">Bildungsbrief-Gala</a><a href="#uniartcity">Standorte</a></div>
+    </div>
+    <div data-pad="1" style="max-width:1560px;margin:0 auto;padding:18px clamp(56px,5.6vw,120px) 40px clamp(66px,6vw,132px);box-sizing:border-box;border-top:1px solid #D6DAD8;display:flex;justify-content:space-between;font-family:'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,'DejaVu Sans Mono','Courier New',monospace;font-size:11px;color:#666E75;gap:20px;flex-wrap:wrap"><span>© 2026 IKG e.V.</span><span style="display:flex;gap:24px"><a href="rechtliches.html#impressum">Impressum</a><a href="rechtliches.html#datenschutz">Datenschutz</a><a href="rechtliches.html#kontakt">Kontakt</a></span></div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>class Component extends DCLogic {
+  componentDidMount() {
+    const mf = document.querySelector('[data-mailform]');
+    if (mf) mf.addEventListener('submit', ev => {
+      ev.preventDefault();
+      const g = n => (mf.querySelector('[name="' + n + '"]') || {}).value || '';
+      const body = 'Name: ' + g('name') + '\nE-Mail: ' + g('email') + '\nAnliegen: ' + g('anliegen') + '\n\n' + g('nachricht');
+      window.location.href = 'mailto:team@kultur-gestaltung.de?subject=' + encodeURIComponent('Anfrage über die Website: ' + g('anliegen')) + '&body=' + encodeURIComponent(body);
+    });
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const thread = document.querySelector('[data-thread]');
+    const knots = Array.prototype.slice.call(document.querySelectorAll('[data-knot]'));
+    if (thread) { this._len = thread.getTotalLength(); thread.style.strokeDasharray = this._len; thread.style.strokeDashoffset = this._len * 0.98; }
+    knots.forEach(k => { k.style.transition = 'background-color .5s'; });
+    if (reduce) { if (thread) thread.style.strokeDashoffset = '0'; return; }
+
+    this._raf = 0;
+    this._onScroll = () => {
+      if (this._raf) return;
+      this._raf = requestAnimationFrame(() => {
+        this._raf = 0;
+        const y = window.scrollY || window.pageYOffset;
+        const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        const prog = Math.min(1, Math.max(0, y / max));
+        if (thread) thread.style.strokeDashoffset = String(this._len * (1 - (0.02 + prog * 0.98)));
+        knots.forEach(k => {
+          const r = k.getBoundingClientRect();
+          const passed = r.top < window.innerHeight * 0.5;
+          k.style.backgroundColor = passed ? (k.style.borderColor || '#1B3A5C') : 'transparent';
+        });
+        Array.prototype.slice.call(document.querySelectorAll('[data-par]')).forEach(el => {
+          const f = parseFloat(el.getAttribute('data-par')) || 0;
+          const r = el.getBoundingClientRect();
+          const base = el.hasAttribute('data-baset') ? parseFloat(el.getAttribute('data-baset')) : 0;
+          el.style.transform = 'translate3d(0,' + (base + (r.top - window.innerHeight / 2) * f * -0.12).toFixed(1) + 'px,0)';
+        });
+      });
+    };
+    Array.prototype.slice.call(document.querySelectorAll('[data-par]')).forEach(el => {
+      const m = /translateY\((-?[\d.]+)px\)/.exec(el.style.transform || '');
+      el.setAttribute('data-baset', m ? m[1] : '0');
+    });
+    const rail = document.querySelector('[data-rail]');
+    if (rail) {
+      const arts = rail.querySelectorAll('article');
+      const step = () => (arts.length > 1 ? arts[1].offsetLeft - arts[0].offsetLeft : rail.clientWidth * 0.8);
+      const prev = document.querySelector('[data-rail-prev]');
+      const next = document.querySelector('[data-rail-next]');
+      if (prev) prev.addEventListener('click', () => rail.scrollBy({ left: -step(), behavior: 'smooth' }));
+      if (next) next.addEventListener('click', () => rail.scrollBy({ left: step(), behavior: 'smooth' }));
+    }
+    const dict = window.IKG_EN || {};
+    const norm = t => t.replace(/\s+/g, ' ').trim();
+    const nodes = [];
+    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: n => {
+        const p = n.parentElement;
+        if (!p || p.closest('script, style, svg, image-slot')) return NodeFilter.FILTER_REJECT;
+        if (p.hasAttribute('data-lang-label')) return NodeFilter.FILTER_REJECT;
+        return norm(n.nodeValue).length > 1 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    let node;
+    while ((node = walk.nextNode())) {
+      const de = norm(node.nodeValue);
+      if (dict[de]) nodes.push({ node: node, de: node.nodeValue, en: node.nodeValue.replace(de, dict[de]) });
+    }
+    const label = document.querySelector('[data-lang-label]');
+    const apply = lang => {
+      nodes.forEach(e => { e.node.nodeValue = lang === 'en' ? e.en : e.de; });
+      document.documentElement.lang = lang === 'en' ? 'en' : 'de';
+      if (label) label.textContent = lang === 'en' ? 'DE' : 'EN';
+      try { localStorage.setItem('ikg-lang', lang); } catch (err) {}
+      this._lang = lang;
+    };
+    let start = 'de';
+    try { start = localStorage.getItem('ikg-lang') === 'en' ? 'en' : 'de'; } catch (err) {}
+    apply(start);
+    const tgl = document.querySelector('[data-lang-toggle]');
+    if (tgl) tgl.addEventListener('click', () => apply(this._lang === 'en' ? 'de' : 'en'));
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onScroll);
+    this._onScroll();
+  }
+  componentWillUnmount() {
+    if (this._onScroll) { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('resize', this._onScroll); }
+  }
+  renderVals() { return {}; }
+}</script>
+</body>
+</html>
