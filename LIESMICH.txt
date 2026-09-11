@@ -1,0 +1,42 @@
+IKG WEBSITE — UPDATE HOCHLADEN
+
+DIESE DATEIEN IN DEN REPOSITORY-ORDNER ZIEHEN (ueberschreiben):
+  index.html
+  rechtliches.html
+  i18n-en.js
+  support.js
+  images/            (kompletter Ordner)
+  CNAME              FEHLT BISHER IM REPOSITORY - bitte mitnehmen
+  .nojekyll          FEHLT BISHER - versteckte Datei, Finder Cmd+Shift+Punkt
+  robots.txt
+  sitemap.xml
+
+Diese Datei hier (LIESMICH.txt) nicht mitkopieren.
+
+DANN IN GITHUB DESKTOP
+  Summary eintragen, z.B. "Update September", Commit to main, Push origin.
+  Nach etwa einer Minute ist es live.
+
+BITTE IM REPOSITORY AUFRAEUMEN
+  Acht Bilder liegen doppelt: einmal direkt im Hauptverzeichnis,
+  einmal in images/. Die Seite laedt nur images/.
+  Diese acht im HAUPTVERZEICHNIS kannst du loeschen (rund 3 MB):
+    band-fv-schmal.jpg
+    band-handwerk-v2.jpg
+    ort-flow-forest.jpg
+    ort-flow-hills.jpg
+    ort-flow-valley.jpg
+    vorstand-luisa.jpg
+    vorstand-michael.jpg
+    vorstand-simon.jpg
+
+WICHTIG
+  CNAME ist noetig, damit institut-kulturgestaltung.de funktioniert.
+  .nojekyll verhindert, dass GitHub Dateien mit Unterstrich ignoriert.
+  support.js nicht aendern, das rendert die Seite.
+  Wenn du deutschen Text in index.html aenderst, muss der gleiche Satz
+  in i18n-en.js angepasst werden, sonst bleibt die Stelle englisch deutsch.
+
+NOCH OFFEN
+  Portraet Lotta Tschirner fehlt.
+  Datenschutzerklaerung vor dem Livegang juristisch pruefen lassen.
